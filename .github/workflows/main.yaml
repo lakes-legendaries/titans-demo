@@ -1,0 +1,33 @@
+name: Deploy App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test_code:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+    - name: Setup Python
+      uses: actions/setup-python@v2
+      with:
+          python-version: 3.9
+    - name: Install ezazure
+      run: |
+        python -m venv .venv
+        source .venv/bin/activate
+        python -m pip install --upgrade pip
+        python -m pip install ezazure
+    - name: Create .ezazure file
+      env:
+        AZURE_TOKEN: ${{ secrets.AZURE_TOKEN }}
+      run: |
+        echo "connection_str: $AZURE_TOKEN" > .ezazure
+        echo "container: demo" >> .ezazure
+    - name: Deploy
+      run: |
+        source .venv/bin/activate
+        ./deploy --prod
