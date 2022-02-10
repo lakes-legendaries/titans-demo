@@ -8,6 +8,7 @@ on:
 jobs:
   test_code:
     runs-on: ubuntu-latest
+    environment: main
     steps:
     - name: Checkout repo
       uses: actions/checkout@v2
