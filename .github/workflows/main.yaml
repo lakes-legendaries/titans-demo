@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  test_code:
+  deploy:
     runs-on: ubuntu-latest
     environment: main
     steps:
