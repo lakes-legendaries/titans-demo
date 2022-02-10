@@ -30,4 +30,4 @@ jobs:
     - name: Deploy
       run: |
         source .venv/bin/activate
-        ./deploy --prod
+        ./deploy.sh --prod
