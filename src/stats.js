@@ -170,8 +170,8 @@ stats.card_power = function(card_num) {
 	// add in bolster
 	if (card[card_num].subv[subv.type.mindless] == null) {
 		let person  = zone.find(card_num).person;
-		let ability = [abilities.bolster_sky, abilities.bolster_fire, abilities.bolster_ice, abilities.bolster_rock, abilities.bolster_rivals];
-		let elem    = [card.elem.sky, card.elem.fire, card.elem.ice, card.elem.rock, null];
+		let ability = [abilities.bolster_storm, abilities.bolster_fire, abilities.bolster_ice, abilities.bolster_rock, abilities.bolster_rivals];
+		let elem    = [card.elem.storm, card.elem.fire, card.elem.ice, card.elem.rock, null];
 		for (let a = 0; a < ability.length; a++) {
 			if (!card[card_num].active[ability[a]]) {continue;}
 			let add   = stats.num_played_of_elem(+(!person), elem[a]);
@@ -245,8 +245,8 @@ stats.update_power = function() {
 		}
 		
 		// Add in bolsters
-		let ability = [abilities.bolster_sky, abilities.bolster_fire, abilities.bolster_ice, abilities.bolster_rock, abilities.bolster_rivals];
-		let elem    = [card.elem.sky, card.elem.fire, card.elem.ice, card.elem.rock, null];
+		let ability = [abilities.bolster_storm, abilities.bolster_fire, abilities.bolster_ice, abilities.bolster_rock, abilities.bolster_rivals];
+		let elem    = [card.elem.storm, card.elem.fire, card.elem.ice, card.elem.rock, null];
 		for (let a = 0; a < ability.length; a++) {
 			let count = stats.count(person, ability[a]);
 			if (count == 0) {continue;}

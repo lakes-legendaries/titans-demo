@@ -61,7 +61,7 @@ var card = {
 	},
 	elem: {
 		forest: 0,
-		sky   : 1,
+		storm   : 1,
 		fire  : 2,
 		ice   : 3,
 		rock  : 4,
@@ -296,9 +296,9 @@ card.props = function(card_num) {
 		cur_card.power            = -1;
 		cur_card.cost             =  1;
 		
-	} else if (card_num < 48) { // 4 sky warriors
+	} else if (card_num < 48) { // 4 storm warriors
 		cur_card.name             = card.name.nikolai_the_cursed;
-		cur_card.elem             = card.elem.sky;
+		cur_card.elem             = card.elem.storm;
 		cur_card.spec             = card.species.warrior;
 		
 		cur_card.power            =  0;
@@ -336,9 +336,9 @@ card.props = function(card_num) {
 		
 		cur_card.abilities[abilities.draw] = 2;
 		
-	} else if (card_num < 64) { // 4 sky beasts
+	} else if (card_num < 64) { // 4 storm beasts
 		cur_card.name             = card.name.winds_howl;
-		cur_card.elem             = card.elem.sky;
+		cur_card.elem             = card.elem.storm;
 		cur_card.spec             = card.species.beast;
 		
 		cur_card.power            = -1;
@@ -379,9 +379,9 @@ card.props = function(card_num) {
 		cur_card.abilities[abilities.flash    ] = 1;
 		cur_card.abilities[abilities.sacrifice] = 2;
 		
-	} else if (card_num < 80) { // 4 sky dragons
+	} else if (card_num < 80) { // 4 storm dragons
 		cur_card.name             = card.name.aurora_draco;
-		cur_card.elem             = card.elem.sky;
+		cur_card.elem             = card.elem.storm;
 		cur_card.spec             = card.species.dragon;
 		
 		cur_card.power            =  1;
@@ -421,11 +421,11 @@ card.props = function(card_num) {
 		cur_card.cost             =  3;
 		
 		cur_card.abilities[abilities.subvert_cave_in] = 1;
-		cur_card.abilities[abilities.bolster_sky    ] = 1;
+		cur_card.abilities[abilities.bolster_storm    ] = 1;
 		
-	} else if (card_num < 96) { // 4 sky titans
+	} else if (card_num < 96) { // 4 storm titans
 		cur_card.name             = card.name.madness_of_1000_stars;
-		cur_card.elem             = card.elem.sky;
+		cur_card.elem             = card.elem.storm;
 		cur_card.spec             = card.species.titan;
 		
 		cur_card.power            =  1;

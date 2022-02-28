@@ -327,7 +327,7 @@ ai.buy_choice = function() {
 		if (energy == 3) {
 			let count = Array(4).fill(0);
 			for (let elem = 0; elem < 4; elem++) {
-				count[elem] = ai.num_owned_elem(player.you, card.elem.sky + elem);
+				count[elem] = ai.num_owned_elem(player.you, card.elem.storm + elem);
 			}
 			for (let elem = 0; elem < 4; elem++) {
 				let mf_elem = math.max_index(count); // most frequent element
@@ -592,7 +592,7 @@ ai.subvert_choice = function(type) {
 	}
 	
 	// =====================================================================================================================
-	// Warriors (Sky)
+	// Warriors (storm)
 	
 	// Choose Summon on first age
 	if (age.major() == 0 && (choice = ai.subvertible(card.name.nikolai_the_cursed, type)) != null) {
@@ -617,7 +617,7 @@ ai.subvert_choice = function(type) {
 	if ((choice = ai.subvertible(card.name.frostbreath      , type)) != null && stats.num_played_of_elem(player.opp, card.elem.rock) >= 2) {
 		return choice;
 	}
-	if ((choice = ai.subvertible(card.name.caverns_defender , type)) != null && stats.num_played_of_elem(player.opp, card.elem.sky ) >= 2) {
+	if ((choice = ai.subvertible(card.name.caverns_defender , type)) != null && stats.num_played_of_elem(player.opp, card.elem.storm ) >= 2) {
 		return choice;
 	}
 	
@@ -684,12 +684,12 @@ ai.subvert_choice = function(type) {
 	if ((choice = ai.subvertible(card.name.frostbreath      , type)) != null && stats.num_played_of_elem(player.opp, card.elem.rock) >= 1) {
 		return choice;
 	}
-	if ((choice = ai.subvertible(card.name.caverns_defender , type)) != null && stats.num_played_of_elem(player.opp, card.elem.sky ) >= 1) {
+	if ((choice = ai.subvertible(card.name.caverns_defender , type)) != null && stats.num_played_of_elem(player.opp, card.elem.storm ) >= 1) {
 		return choice;
 	}
 	
 	// =====================================================================================================================
-	// Warriors (Sky)
+	// Warriors (storm)
 	
 	// Choose Summon on second age
 	if (age.major() == 1 && (choice = ai.subvertible(card.name.nikolai_the_cursed, type)) != null) {

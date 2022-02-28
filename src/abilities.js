@@ -12,7 +12,7 @@ var abilities = {
 	bolster_ice        :  2,
 	bolster_rivals     :  3,
 	bolster_rock       :  4,
-	bolster_sky        :  5,
+	bolster_storm        :  5,
 	discard            :  6,
 	draw               :  7,
 	energy             :  8,
@@ -77,7 +77,7 @@ abilities.to_text = function(ability) {
 		case abilities.bolster_ice        : return "Bolster: Ice";
 		case abilities.bolster_rivals     : return "Bolster: Rivals";
 		case abilities.bolster_rock       : return "Bolster: Rock";
-		case abilities.bolster_sky        : return "Bolster: Sky";
+		case abilities.bolster_storm        : return "Bolster: storm";
 		case abilities.discard            : return "Discard";
 		case abilities.draw               : return "Draw";
 		case abilities.energy             : return "Energy";

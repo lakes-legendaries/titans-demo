@@ -173,7 +173,7 @@ tut.pos = {
 	later_buys     : {x: 2865, y:  390, button: {x: 3250, y: 737}},
 	super_effective: {x: 1950, y: 690},
 	shader: {
-		sky      : 2075,
+		storm      : 2075,
 		fire     : 2375,
 		ice      : 2675,
 		rock     : 2975,
@@ -454,7 +454,7 @@ tut.button.click = function(b) {
 					// show shaders
 					switch (tut.first_buy.frame.name) {
 						case 2:
-							env.place(tut.v_shade, {x: tut.pos.shader.sky, y: tut.pos.shader.default_y});
+							env.place(tut.v_shade, {x: tut.pos.shader.storm, y: tut.pos.shader.default_y});
 							tut.v_shade.setFrame(0).setVisible(true);
 							break;
 						case 3:
