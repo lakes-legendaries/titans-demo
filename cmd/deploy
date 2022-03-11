@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# compile file
+cmd/compile
+
+# get access
+if [ -z "$AZURE_STORAGE_CONNECTION_STRING" ]; then
+    if [ ! -f ".azconn" ]; then
+        echo "Cannot connect to Azure. "
+        echo "Set AZURE_STORAGE_CONNECTION_STRING, "
+        echo "or provide it in an .azconn file."
+    else
+        export AZURE_STORAGE_CONNECTION_STRING="$(cat .azconn)"
+    fi
+fi
+
+# upload js
+az storage blob upload -c "\$web" -f titans-demo.js -n titans-demo.js

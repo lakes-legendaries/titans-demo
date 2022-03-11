@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# create output file
+TARGET=titans-demo.js
+rm -f $TARGET
+touch $TARGET
+
+# include phaser
+wget cdn.jsdelivr.net/npm/phaser@3.50.0/dist/phaser.js -qO ->> $TARGET
+wget https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/b0ae5f3c53d9e35dccf5ab2dde4ceefde9a05f0a/dist/rexbbcodetextplugin.min.js -qO ->> $TARGET
+
+# combine files
+for FILE in $(ls src); do
+    cat src/$FILE >> $TARGET
+done
