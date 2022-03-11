@@ -10,6 +10,34 @@ wget cdn.jsdelivr.net/npm/phaser@3.50.0/dist/phaser.js -qO ->> $TARGET
 wget https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/b0ae5f3c53d9e35dccf5ab2dde4ceefde9a05f0a/dist/rexbbcodetextplugin.min.js -qO ->> $TARGET
 
 # combine files
-for FILE in $(ls src); do
-    cat src/$FILE >> $TARGET
+for FILE in \
+    src/age.js \
+    src/env.js \
+    src/math.js \
+    src/player.js \
+    src/abilities.js \
+    src/camera.js \
+    src/log.js \
+    src/maximize.js \
+    src/touch.js \
+    src/zone.js \
+    src/subv.js \
+    src/ref.js \
+    src/card.js \
+    src/move.js \
+    src/stats.js \
+    src/tut.js \
+    src/full_card.js \
+    src/highlight.js \
+    src/instr.js \
+    src/actions.js \
+    src/ai.js \
+    src/loading.js \
+    src/controller.js \
+    src/button.js \
+    src/input.js \
+    src/debug.js \
+    src/game.js \
+; do
+    cat $FILE >> $TARGET
 done
