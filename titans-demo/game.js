@@ -61,6 +61,7 @@ game.config = {
 	width  : env.window.x,
 	height : env.window.y,
 	physics: {default: 'arcade'},
+	parent: "body",
 	scene  : {
 		preload: game.preload,
 		create : game.setup,

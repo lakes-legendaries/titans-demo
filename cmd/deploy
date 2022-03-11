@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# compile file
-cmd/compile
-
 # get access
 if [ -z "$AZURE_STORAGE_CONNECTION_STRING" ]; then
     SECRETS_FILE=~/secrets/azconn-dev
@@ -15,10 +12,16 @@ if [ -z "$AZURE_STORAGE_CONNECTION_STRING" ]; then
     export AZURE_STORAGE_CONNECTION_STRING="$(cat $SECRETS_FILE)"
 fi
 
-# upload js
+# upload
+az storage blob upload-batch \
+    -d "\$web" \
+    -s titans-demo \
+    --destination-path titans-demo \
+    --no-progress \
+1> /dev/null
 az storage blob upload \
     -c "\$web" \
-    -f titans-demo.js \
-    -n titans-demo.js \
+    -f titans-demo.html \
+    -n titans-demo.html \
     --no-progress \
 1> /dev/null
