@@ -5,14 +5,20 @@ cmd/compile
 
 # get access
 if [ -z "$AZURE_STORAGE_CONNECTION_STRING" ]; then
-    if [ ! -f ".azconn" ]; then
+    SECRETS_FILE=~/secrets/azconn-dev
+    if [ ! -f $SECRETS_FILE ]; then
         echo "Cannot connect to Azure. "
         echo "Set AZURE_STORAGE_CONNECTION_STRING, "
-        echo "or provide it in an .azconn file."
-    else
-        export AZURE_STORAGE_CONNECTION_STRING="$(cat .azconn)"
+        echo "or provide it in $SECRETS_FILE"
+        exit 1
     fi
+    export AZURE_STORAGE_CONNECTION_STRING="$(cat $SECRETS_FILE)"
 fi
 
 # upload js
-az storage blob upload -c "\$web" -f titans-demo.js -n titans-demo.js
+az storage blob upload \
+    -c "\$web" \
+    -f titans-demo.js \
+    -n titans-demo.js \
+    --no-progress \
+1> /dev/null
