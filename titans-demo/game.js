@@ -67,13 +67,13 @@ game.config = {
 		create : game.setup,
 		update : game.update,
 		pack: {files: [
-			{type: 'image', key: 'cover0', url: 'demo/Cover 0.png'},
-			{type: 'image', key: 'cover1', url: 'demo/Cover 1.png'},
-			{type: 'image', key: 'cover2', url: 'demo/Cover 2.png'},
-			{type: 'image', key: 'cover3', url: 'demo/Cover 3.png'},
-			{type: 'image', key: 'cover4', url: 'demo/Cover 4.png'},
-			{type: 'image', key: 'cover5', url: 'demo/Cover 5.png'},
-			{type: 'image', key: 'cover6', url: 'demo/Cover 6.png'}
+			{type: 'image', key: 'cover0', url: 'demo-assets/Cover 0.png'},
+			{type: 'image', key: 'cover1', url: 'demo-assets/Cover 1.png'},
+			{type: 'image', key: 'cover2', url: 'demo-assets/Cover 2.png'},
+			{type: 'image', key: 'cover3', url: 'demo-assets/Cover 3.png'},
+			{type: 'image', key: 'cover4', url: 'demo-assets/Cover 4.png'},
+			{type: 'image', key: 'cover5', url: 'demo-assets/Cover 5.png'},
+			{type: 'image', key: 'cover6', url: 'demo-assets/Cover 6.png'}
 		]}
 	},
 	scale: {
