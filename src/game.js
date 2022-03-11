@@ -66,13 +66,13 @@ game.config = {
 		create : game.setup,
 		update : game.update,
 		pack: {files: [
-			{type: 'image', key: 'cover0', url: 'https://titansofeden.blob.core.windows.net/demo-dev/Cover%200.png'},
-			{type: 'image', key: 'cover1', url: 'https://titansofeden.blob.core.windows.net/demo-dev/Cover%201.png'},
-			{type: 'image', key: 'cover2', url: 'https://titansofeden.blob.core.windows.net/demo-dev/Cover%202.png'},
-			{type: 'image', key: 'cover3', url: 'https://titansofeden.blob.core.windows.net/demo-dev/Cover%203.png'},
-			{type: 'image', key: 'cover4', url: 'https://titansofeden.blob.core.windows.net/demo-dev/Cover%204.png'},
-			{type: 'image', key: 'cover5', url: 'https://titansofeden.blob.core.windows.net/demo-dev/Cover%205.png'},
-			{type: 'image', key: 'cover6', url: 'https://titansofeden.blob.core.windows.net/demo-dev/Cover%206.png'}
+			{type: 'image', key: 'cover0', url: 'demo/Cover 0.png'},
+			{type: 'image', key: 'cover1', url: 'demo/Cover 1.png'},
+			{type: 'image', key: 'cover2', url: 'demo/Cover 2.png'},
+			{type: 'image', key: 'cover3', url: 'demo/Cover 3.png'},
+			{type: 'image', key: 'cover4', url: 'demo/Cover 4.png'},
+			{type: 'image', key: 'cover5', url: 'demo/Cover 5.png'},
+			{type: 'image', key: 'cover6', url: 'demo/Cover 6.png'}
 		]}
 	},
 	scale: {
