@@ -2,7 +2,7 @@
 
 # get access
 if [ -z "$AZURE_STORAGE_CONNECTION_STRING" ]; then
-    SECRETS_FILE=~/secrets/azconn-dev
+    SECRETS_FILE=~/secrets/titans-fileserver-dev
     if [ ! -f $SECRETS_FILE ]; then
         echo "Cannot connect to Azure. "
         echo "Set AZURE_STORAGE_CONNECTION_STRING, "
